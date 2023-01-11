@@ -1,0 +1,98 @@
+.skills {
+    &__title {
+        position: relative;
+        margin-top: 126px;
+        color: #000000;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__subtitle {
+        color: #000000;
+        text-align: center;
+    }
+    &__divider {
+        margin-top: 25px;
+    }
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        column-gap: 20px;
+        row-gap: 20px;             
+    }
+    &__item {
+        border: 1px solid #000000;
+        padding: 30px 30px 25px 30px;
+        &-icon {
+            display: flex;
+            justify-content: center;
+        }
+        &-title {
+            padding-top: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+        }
+        &-body {
+            padding-top: 15px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+        }
+    }
+    &__progress  {
+        position: relative;
+        margin-bottom: 30px;
+        &-wrapper {
+        margin-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        column-gap: 45px;
+        row-gap: 30px;  
+        }
+        &-title {
+            display: inline-block;
+            position: relative;
+            padding:0 0 0 13px;
+            padding-bottom: 27px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 21px;
+            @include before_circle;
+            &:before {
+                position: absolute;
+                top: -8px;
+                right: -14px;
+            }
+        }
+        &-percent {
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &-grey {
+            position: absolute;
+            width: 350px;
+            height: 14px;
+            background: #E8E4DE;
+            border-radius: 4px;
+        }
+        span {
+            position: absolute;
+            height: 14px;
+            background: #FFA501;
+            border-radius: 4px;
+        }
+    }
+}

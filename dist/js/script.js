@@ -9,3 +9,10 @@ hamburger.addEventListener('click', () => {
 close.addEventListener('click', () => {
     menu.classList.remove('active');
 });
+
+const percents = document.querySelectorAll('.skills__progress-percent'),
+    orange = document.querySelectorAll('.skills__progress-orange span');
+
+    percents.forEach( (item, i) => {
+        orange[i].style.width = item.innerHTML;
+    });
