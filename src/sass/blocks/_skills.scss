@@ -1,21 +1,5 @@
 .skills {
-    &__title {
-        position: relative;
-        margin-top: 126px;
-        color: #000000;
-        text-align: center;
-        @include before_circle;
-        &:before {
-            position: absolute;
-            top: -3px;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-    &__subtitle {
-        color: #000000;
-        text-align: center;
-    }
+    
     &__divider {
         margin-top: 25px;
     }
