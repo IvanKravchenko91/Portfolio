@@ -10,9 +10,9 @@ close.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
-const percents = document.querySelectorAll('.skills__progress-percent'),
+const progress = document.querySelectorAll('.skills__progress-percent'),
     orange = document.querySelectorAll('.skills__progress-orange span');
 
-    percents.forEach( (item, i) => {
-        orange[i].style.width = item.innerHTML;
-    });
+progress.forEach( (item, i) => {
+    orange[i].style.width = item.innerHTML;
+});
