@@ -10,9 +10,9 @@ close.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
-const progress = document.querySelectorAll('.skills__progress-percent'),
-    orange = document.querySelectorAll('.skills__progress-orange span');
+const counters = document.querySelectorAll('.skills__ratings-counter'),
+      lines = document.querySelectorAll('.skills__ratings-line span');
 
-progress.forEach( (item, i) => {
-    orange[i].style.width = item.innerHTML;
+counters.forEach( (item, i) => {
+    lines[i].style.width = item.innerHTML;
 });

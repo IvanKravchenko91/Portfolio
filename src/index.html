@@ -23,25 +23,10 @@
     <meta property="twitter:image" content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
 
     <!-- Favicon  -->
-    <link  rel= "иконка быстрого доступа"  href= "/favicon.ico"  type= "image/x-icon" > 
-    <link  rel= "icon"  href= "/favicon.ico"  type= "image/x-icon" >
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="icon/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/png" sizes="16x16" href="/src/icons/">
+    <link rel="manifest" href="/site.webmanifest">
 
     <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -122,7 +107,16 @@
         <div class="container">
             <div class="about_me__wrapper">
                 <div class="about_me__photo">
-                    <img src="img/snoub.png" alt="photo">
+                    <!-- <img srcset="img/snoub-min.png 300w,
+                                 img/snoub.png 400w"
+                        sizes="(max-width: 577px) 300px,
+                               (min-width: 576px) 400px"
+                        src="img/snoub.png" alt="photo"> -->
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="img/snoub-min.png">
+                            <source media="(min-width: 576px)" srcset="img/snoub.png">
+                            <img src="img/snoub.png" alt="photo">
+                        </picture>
                 </div>
                 
                 <div class="about_me__descr">
@@ -235,147 +229,122 @@
             </div>               
         </div>
     </section>
-
     <section class="skills">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Навыки</h2>
             <div class="title title_fz36 title__section-subtitle">Что я использую в работе</div>
             <div class="divider"></div>
 
-            <div class="skills__wrapper">
+            <div class="skills__items">
                 <div class="skills__item">
-                    <div class="skills__item-icon">
-                        <img src="icons/skills/html5.svg" alt="html">
+                    <div class="skills__item-img">
+                        <img src="icons/skills/html5.svg" alt="html5">
                     </div>
-                    <div class="skills__item-title">HTML5</div>
-                    <div class="skills__item-body">Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</div>
+                    <h3 class="title title_fz14">HTML5</h3>
+                    <p>Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</p>
                 </div>
-
                 <div class="skills__item">
-                    <div class="skills__item-icon">
+                    <div class="skills__item-img">
                         <img src="icons/skills/css3.svg" alt="css3">
                     </div>
-                    <div class="skills__item-title">CSS3</div>
-                    <div class="skills__item-body">Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</div>
+                    <h3 class="title title_fz14">CSS3</h3>
+                    <p>Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!</p>
                 </div>
-
                 <div class="skills__item">
-                    <div class="skills__item-icon">
-                        <img src="icons/skills/js.svg" alt="js">
+                    <div class="skills__item-img">
+                        <img src="icons/skills/js.svg" alt="java script">
                     </div>
-                    <div class="skills__item-title">Java Script</div>
-                    <div class="skills__item-body">Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</div>
+                    <h3 class="title title_fz14">Java Script</h3>
+                    <p>Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое</p>
                 </div>
-
                 <div class="skills__item">
-                    <div class="skills__item-icon">
-                        <img src="icons/skills/jquery.svg" alt="jquery">
+                    <div class="skills__item-img">
+                        <img src="icons/skills/jquery.svg" alt="Jquery">
                     </div>
-                    <div class="skills__item-title">jquery</div>
-                    <div class="skills__item-body">Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</div>
+                    <h3 class="title title_fz14">Jquery</h3>
+                    <p>Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</p>
                 </div>
-
                 <div class="skills__item">
-                    <div class="skills__item-icon">
+                    <div class="skills__item-img">
                         <img src="icons/skills/react.svg" alt="React">
                     </div>
-                    <div class="skills__item-title">React</div>
-                    <div class="skills__item-body">Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели</div>
+                    <h3 class="title title_fz14">React</h3>
+                    <p>Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели</p>
                 </div>
-
                 <div class="skills__item">
-                    <div class="skills__item-icon">
+                    <div class="skills__item-img">
                         <img src="icons/skills/node.js.svg" alt="Node.js">
                     </div>
-                    <div class="skills__item-title">Node.js</div>
-                    <div class="skills__item-body">Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит</div>
+                    <h3 class="title title_fz14">Node.js</h3>
+                    <p>Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит</p>
                 </div>
-
                 <div class="skills__item">
-                    <div class="skills__item-icon">
+                    <div class="skills__item-img">
                         <img src="icons/skills/mongo.db.svg" alt="Mongo.db">
                     </div>
-                    <div class="skills__item-title">Mongo.db</div>
-                    <div class="skills__item-body">Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения</div>
+                    <h3 class="title title_fz14">Mongo.db</h3>
+                    <p>Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения</p>
                 </div>
+            </div>
 
-                <div class="skills__item">
-                    <div class="skills__item-icon">
-                        <img src="icons/skills/html5.svg" alt="html">
+            <div class="skills__ratings">
+                <div class="skills__ratings-item">
+                    <div class="title title_fz14 skills__ratings-title">Создание сайтов</div>
+                    <div class="skills__ratings-counter">100%</div>
+                    <div class="skills__ratings-line">
+                        <span></span>
                     </div>
-                    <div class="skills__item-title">HTML5</div>
-                    <div class="skills__item-body">Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта</div>
                 </div>
-                <div class="skills__progress-wrapper">   
-                    <div class="skills__progress">
-                        <div class="skills__progress-title">Создание сайтов</div>
-                        <div class="skills__progress-percent">85%</div>
-                        <div class="skills__progress-grey"></div>
-                        <div class="skills__progress-orange">
-                            <span></span>
-                        </div>
+                <div class="skills__ratings-item">
+                    <div class="title title_fz14 skills__ratings-title">Создание приложений</div>
+                    <div class="skills__ratings-counter">85%</div>
+                    <div class="skills__ratings-line">
+                        <span></span>
                     </div>
-
-                    <div class="skills__progress">
-                        <div class="skills__progress-title">Создание приложений</div>
-                        <div class="skills__progress-percent">60%</div>
-                        <div class="skills__progress-grey"></div>
-                        <div class="skills__progress-orange">
-                            <span></span> 
-                        </div>
+                </div>
+                <div class="skills__ratings-item">
+                    <div class="title title_fz14 skills__ratings-title">Работа с данными</div>
+                    <div class="skills__ratings-counter">90%</div>
+                    <div class="skills__ratings-line">
+                        <span></span>
                     </div>
-
-                    <div class="skills__progress">
-                        <div class="skills__progress-title">Работа с данными</div>
-                        <div class="skills__progress-percent">37%</div>
-                        <div class="skills__progress-grey"></div>
-                        <div class="skills__progress-orange">
-                            <span></span> 
-                        </div>
+                </div>
+                <div class="skills__ratings-item">
+                    <div class="title title_fz14 skills__ratings-title">Креативность</div>
+                    <div class="skills__ratings-counter">75%</div>
+                    <div class="skills__ratings-line">
+                        <span></span>
                     </div>
-
-                    <div class="skills__progress">
-                        <div class="skills__progress-title">Креативность</div>
-                        <div class="skills__progress-percent">20%</div>
-                        <div class="skills__progress-grey"></div>
-                        <div class="skills__progress-orange">
-                            <span></span> 
-                        </div>
+                </div>
+                <div class="skills__ratings-item">
+                    <div class="title title_fz14 skills__ratings-title">Создание дизайна</div>
+                    <div class="skills__ratings-counter">90%</div>
+                    <div class="skills__ratings-line">
+                        <span></span>
                     </div>
-
-                    <div class="skills__progress">
-                        <div class="skills__progress-title">Создание дизайна</div>
-                        <div class="skills__progress-percent">15%</div>
-                        <div class="skills__progress-grey"></div>
-                        <div class="skills__progress-orange">
-                            <span></span> 
-                        </div>
-                    </div>
-
-                    <div class="skills__progress">
-                        <div class="skills__progress-title">Soft skills</div>
-                        <div class="skills__progress-percent">35%</div>
-                        <div class="skills__progress-grey"></div>
-                        <div class="skills__progress-orange">
-                            <span></span> 
-                        </div>
+                </div>
+                <div class="skills__ratings-item">
+                    <div class="title title_fz14 skills__ratings-title">Soft skills</div>
+                    <div class="skills__ratings-counter">95%</div>
+                    <div class="skills__ratings-line">
+                        <span></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="portfolio">
+    <!-- <section class="portfolio">
         <div class="container">
             <h2 class="title title_fz16 title__section-title">Портфолио</h2>
             <div class="title title_fz36 title__section-subtitle">Мои работы</div>
             <div class="divider"></div>
 
             <div class="portfolio__wrapper">
-                <a href="/dist/ProjectUber/dist" class="portfolio__item">
+                <a href="/ProjectUber/dist/src/index.html" class="portfolio__item">
                     <img src="img/works/uber.jpg" alt="uber">
                 </a>
-                <a href="/dist/ProjectPulse/dist/src/index.html" class="portfolio__item">
+                <a href="/ProjectPulse/dist/src/index.html" class="portfolio__item">
                     <img src="img/works/pulse.jpg" alt="pulse">
                 </a>
                 <a href="#" class="portfolio__item">
@@ -387,8 +356,8 @@
                 <a href="#" class="portfolio__item">
                     <img src="img/works/ipad.jpg" alt="test">
                 </a>
-                <a href="#" class="portfolio__item horizontal">
-                    <img src="img/works/mac.jpg" alt="test">
+                <a href="/ProjectWordpress/dist/src/index.html" class="portfolio__item horizontal">
+                    <img src="img/main_bg (1).png" alt="Wordpress">
                 </a>
             </div>
         </div>
@@ -441,7 +410,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <script src="js/script.js"></script>
 </body>
