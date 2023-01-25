@@ -16,3 +16,23 @@ const counters = document.querySelectorAll('.skills__ratings-counter'),
 counters.forEach( (item, i) => {
     lines[i].style.width = item.innerHTML;
 });
+
+$('#form').submit(function(e) {
+    e.preventDefault();
+
+    if (!$(this).valid()) {
+        return;
+    }
+
+    $.ajax({
+        type: "POST",
+        url: "mailer/smart.php",
+        data: $(this).serialize()
+    }).done(function() {
+        $(this).find("input").val("");
+        $('.contacts, #thanks').fadeIn('slow');
+
+        $('#form').trigger('reset');
+    });
+    return false;
+});

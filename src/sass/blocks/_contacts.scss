@@ -1,4 +1,5 @@
 .contacts {
+    position: relative;
     padding: 60px 0 90px 0;
     &__wrapper {
         padding: 0 36px 0 52px;
@@ -101,4 +102,42 @@
         font-size: 14px;
         line-height: 21px;
     }
+    .modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 352px;
+        min-height: 170px;
+        background: #F2F2F2;
+        padding: 38px 40px 40px 40px;
+        &__close {
+            position: absolute;
+            top: 0px;
+            right: -38px;
+            font-size: 44px;
+            line-height: 21px;
+            color: $main-color;
+            cursor: pointer;
+        }
+        &__subtitle {
+            margin-bottom: 11px;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 18px;
+            text-align: center;       
+            color: #0D0D0D;    
+        }
+        &__descr {
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 14px;
+            line-height: 14px;
+            color: #0D0D0D;   
+        }
+    }
+}
+#thanks {
+    display: none;
 }
